@@ -1,16 +1,25 @@
-# React + Vite
+# 🏀 White Rock Manager
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+O **White Rock Manager** é um sistema de gestão esportiva desenvolvido para organizar o plantão de atletas e o controle financeiro do time White Rock F.C. 
 
-Currently, two official plugins are available:
+O projeto apresenta uma interface moderna em "dark mode" com foco em usabilidade e performance, conectando-se diretamente a um banco de dados em tempo real.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 🚀 Funcionalidades Atuais
+- **Plantão de Atletas:** Listagem dinâmica de jogadores vindos do banco de dados.
+- **Identificação Visual:** Cards personalizados com número da camisa, posição e status.
+- **Design Responsivo:** Interface que se adapta perfeitamente a telemóveis e computadores.
+- **Integração Supabase:** Consumo de dados seguro e escalável.
 
-## React Compiler
+## 🛠️ Tecnologias Utilizadas
+- [React.js](https://reactjs.org/) - Biblioteca principal.
+- [Tailwind CSS v3](https://tailwindcss.com/) - Framework de estilização.
+- [Supabase](https://supabase.com/) - Backend as a Service (Banco de Dados).
+- [Vite](https://vitejs.dev/) - Ferramenta de build e servidor de desenvolvimento.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 📦 Como rodar o projeto localmente
 
-## Expanding the ESLint configuration
+Siga os passos abaixo para configurar o ambiente:
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+1. **Clone o repositório:**
+   ```bash
+   git clone [https://github.com/amagnelle/whiterock.git](https://github.com/amagnelle/whiterock.git)
