@@ -1,6 +1,6 @@
 # 🏀 White Rock Manager
 
-O **White Rock Manager** é um sistema de gestão esportiva desenvolvido para organizar o plantão de atletas e o controle financeiro do time White Rock F.C. 
+O **White Rock Manager** é um sistema de gestão esportiva desenvolvido para organizar o plantão de atletas e o controle financeiro do time White Rock B.C. 
 
 O projeto apresenta uma interface moderna em "dark mode" com foco em usabilidade e performance, conectando-se diretamente a um banco de dados em tempo real.
 
