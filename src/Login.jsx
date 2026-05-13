@@ -39,7 +39,7 @@ import { useNavigate } from 'react-router-dom'
             <input 
               type="email" 
               placeholder="seu@email.com"
-              className="w-full bg-black/30 border border-white/10 rounded-xl px-4 py-3 mt-1 focus:border-[#0057A8] outline-none transition-all"
+              className="w-full bg-black/30 border  text-white border-white/10 rounded-xl px-4 py-3 mt-1 focus:border-[#0057A8] outline-none transition-all"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               required
@@ -51,7 +51,7 @@ import { useNavigate } from 'react-router-dom'
             <input 
               type="password" 
               placeholder="••••••••"
-              className="w-full bg-black/30 border border-white/10 rounded-xl px-4 py-3 mt-1 focus:border-[#0057A8] outline-none transition-all"
+              className="w-full bg-black/30 border text-white border-white/10 rounded-xl px-4 py-3 mt-1 focus:border-[#0057A8] outline-none transition-all"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
               required
