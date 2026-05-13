@@ -1,9 +1,14 @@
 import { useEffect, useState } from 'react'
 import { supabase } from './supabaseClient'
+import { Routes, Route, useNavigate } from 'react-router-dom'
 
-function App() {
+import Login from './Login'
+import AdminLayout from './Adm'
+
+function  HomePage() {
   const [atletas, setAtletas] = useState([])
   const [carregando, setCarregando] = useState(true)
+  const navigate = useNavigate()
 
   useEffect(() => {
     getAtletas()
@@ -36,7 +41,9 @@ function App() {
             WHITE ROCK <span className="text-[#00A8E8]">MANAGER</span>
           </h1>
           
-          <button className="bg-white hover:bg-gray-200 text-black px-5 py-2 rounded-xl font-bold text-sm shadow-lg transition-colors">
+          <button  onClick={() => navigate('/login')}
+          className="bg-white hover:bg-gray-200 text-black px-5 py-2 rounded-xl font-bold text-sm shadow-lg transition-colors"
+          >
             Login Adm
           </button>
         </div>
@@ -118,6 +125,14 @@ function App() {
               </ul>
             </div>
 
+            <div>
+              <h4 className="text-white font-bold mb-4 uppercase text-xs tracking-[0.2em]">Contato</h4>
+              <ul className="text-gray-500 text-sm space-y-2">
+                <li className="hover:text-[#00A8E8] cursor-pointer transition-colors">Email:</li>
+                <li className="hover:text-[#00A8E8] cursor-pointer transition-colors"></li>
+              </ul>
+            </div>
+
             {/* COLUNA 3: Localização */}
             <div>
               <h4 className="text-white font-bold mb-4 uppercase text-xs tracking-[0.2em]">Localização</h4>
@@ -138,4 +153,20 @@ function App() {
   )
 }
 
-export default App
+
+export default function App() {
+
+  return (
+
+    <Routes>
+
+      <Route path="/" element={<HomePage />} />
+
+      <Route path="/login" element={<Login />} />
+
+      <Route path="/admin" element={<AdminLayout />} />
+
+    </Routes>
+
+  )
+}
