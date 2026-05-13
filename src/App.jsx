@@ -87,7 +87,7 @@ function  HomePage() {
                 <p className="text-gray-500 text-sm mb-4">{atleta.posicao || 'Posição não definida'}</p>
                 
                 <div className="pt-4 border-t border-white/5 flex justify-between items-center text-xs text-gray-400">
-                  <span>White Rock F.C.</span>
+                  <span>White Rock</span>
                   <span className="opacity-50">v.2026</span>
                 </div>
               </div> // Fechamento correto da div do card
