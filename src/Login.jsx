@@ -1,12 +1,16 @@
 import { useState } from 'react'
 import { supabase } from './supabaseClient'
 import { useNavigate } from 'react-router-dom'
+import { Eye, EyeOff} from 'lucide-react'
 
  function Login() {
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
   const [loading, setLoading] = useState(false)
   const navigate = useNavigate()
+  const [showPassword, setShowPassword] = useState(false)
+
+
 
   async function handleLogin(e) {
     e.preventDefault()
@@ -45,18 +49,32 @@ import { useNavigate } from 'react-router-dom'
               required
             />
           </div>
+            <div className="relative">
 
-          <div>
-            <label className="text-xs uppercase font-bold text-gray-500 ml-1">Senha</label>
-            <input 
-              type="password" 
-              placeholder="••••••••"
-              className="w-full bg-black/30 border text-white border-white/10 rounded-xl px-4 py-3 mt-1 focus:border-[#0057A8] outline-none transition-all"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-              required
-            />
-          </div>
+              <label className="text-xs uppercase font-bold text-gray-500 ml-1">
+                Senha
+              </label>
+
+              <input
+                type={showPassword ? 'text' : 'password'}
+                placeholder="••••••••"
+                className="w-full bg-black/30 border text-white border-white/10 rounded-xl px-4 py-3 mt-1 focus:border-[#0057A8] outline-none transition-all"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+                required
+              />
+
+              <button
+                type="button"
+                onClick={() => setShowPassword(!showPassword)}
+                className="absolute right-4 top-11 text-gray-400 hover:text-white transition-colors"
+              >
+
+                {showPassword ? <EyeOff size={20} /> : <Eye size={20} />}
+
+              </button>
+
+</div>
 
           <button 
             type="submit" 
